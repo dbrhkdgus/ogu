@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-image: url(/practice/Css-practice/오구배경-초원.jpg);
+    background-image: url(/오구배경-초원.jpg);
     background-size: cover;
     background-color: e9f3ff;
     /* background-position-x: 300px; */
@@ -181,7 +181,7 @@ nav>ul>li>a{
 footer{
     border-top: 5px solid gray;
     text-align: center;
-    background-image: url(/practice/Css-practice/하트오구.png);
+    background-image: url(/하트오구.png);
     background-size: contain;
     background-position: bottom;
 }
