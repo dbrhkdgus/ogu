@@ -34,20 +34,21 @@ header a{
 }
 .grid{
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 200px 1fr;
     text-align: center;
 }
 
 nav{
     width: 120px;
     margin-top: 0px;
+    padding-right: 50px;
     padding-left: 0px;
     border-right: 3px solid gray;
     
 }
 nav>ul{
    list-style: none;
-    padding-left: 10px;
+    padding-left: 50px;
     
 }
 nav ul li{
@@ -59,19 +60,23 @@ nav>ul>li>a{
     text-decoration: none;
     
 }
-.gifs, .info{
+.gifs, .info, .emo{
     margin: 0px auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    
 }
-.gifs ul, .info ul{
+
+
+
+.gifs ul, .info ul, .emo ul{
     list-style-type: none;
     
 }
+
 .info > ul > li{
     text-align: left;
+    line-height: 30px;
 }
 .info ul img{
     box-shadow:1px 1px 15px gray;
@@ -82,11 +87,43 @@ nav>ul>li>a{
     height: 3px;
     border:2px solid beige;
 }
-.gifs ul li{
+.info ul li p{
+    background-color: rgba(176, 186, 195,0.5);
+    color: dimgrey;
+}
+.info-emp{
+    position: relative;
+    font-weight: bold;
+}
+.info-emp:hover{
+  background: rgba(255, 0, 0, .5);
+  transition: background-color 0.2s ease-out 0.2s;
+}
+.info ul li iframe{
+    position: absolute;
+    visibility: hidden;
+}
+.info-img, .info-emp>iframe{
+    background-color: white;
+    position: absolute;
+    transform: translateY(-230px);
+    border: 2px solid gray;
+    visibility: hidden;
+}
+.info-emp:hover .info-img {
+    transition: 0.2s ease-in-out 0.2s;
+    visibility: visible;
+}
+.info-emp:hover iframe{
+    visibility: visible;
+    z-index: 1;
+}
+.gifs ul li, .emo ul li{
     float: left;
     margin: 20px;
     text-align: center;
 }
+
 .gifs li h3{
     position: relative;
     margin: 0px;
@@ -107,6 +144,38 @@ nav>ul>li>a{
 .gifs li:hover img{
     box-shadow: 5px 5px 5px gray;
 }
+
+.emo-div{
+    position: relative;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+}
+.emo-div img{
+    border: 1px solid gray;
+   
+}
+.emo-img{
+    position: absolute;
+    visibility: hidden;
+    width: 400px;
+    top: -50px;
+    left: 350px;
+    z-index: 1;
+}
+.emo-div .emoimg:hover{
+    box-shadow: 5px 5px 15px gray;
+}
+
+.emo-div img:hover + .emo-img{
+    visibility: visible;
+   
+}
+.emo-img:hover{
+    visibility: visible;
+    
+}
+
 
 
 footer{
